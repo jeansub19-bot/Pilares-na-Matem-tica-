@@ -1,0 +1,183 @@
+/* ==============================
+    ESTILOS GERAIS (BODY)
+===============================*/
+body {
+    font-family: Arial, sans-serif;
+    background-image:  ('fundo-escolar.jpg');
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* ==============================
+    CONTAINERS PRINCIPAIS (TELAS)
+===============================*/
+#game-wrapper > div {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px black;
+    width: 90%;
+    max-width: 900px;
+    text-align: center;
+}
+
+/* ==============================
+    BOTÕES
+===============================*/
+.menu-buttons-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas */
+    gap: 15px; /* Espaço entre os botões */
+    margin-top: 20px;
+}
+
+.btn {
+    display: block; /* Ocupa 100% da célula da grade */
+    width: 100%;
+    box-sizing: border-box; /* Garante que padding não afete a largura */
+    margin: 0; /* Remove margem extra */
+    padding: 15px;
+    background: #4CAF50;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+}
+.btn:hover {
+    background: #45a049;
+}
+.btn:disabled {
+    background: gray;
+    cursor: not-allowed;
+}
+
+#back-to-menu-btn {
+    background: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 15px; /* Espaçamento */
+    transition: 0.3s;
+    vertical-align: middle; /* Alinha com o texto do HUD */
+}
+#back-to-menu-btn:hover {
+    background: #d32f2f;
+}
+
+/* ==============================
+    CAMPO DE BATALHA (JOGO)
+===============================*/
+.battlefield {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0;
+}
+.character, .enemy {
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+}
+.character {
+    background-image: ('Estudo.herói.png');
+}
+.enemy {
+    background-image:  ("vilão.png");
+}
+
+/* ==============================
+    BARRAS DE VIDA (HP)
+===============================*/
+.hp-wrap {
+    width: 150px;
+    margin: 5px auto;
+}
+.health-bar {
+    background: #ff4d4d;
+    height: 20px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    overflow: hidden;
+}
+.health {
+    background: limegreen;
+    height: 100%;
+    border-radius: 10px;
+    width: 100%;
+    transition: width 0.5s ease-in-out;
+}
+
+/* ==============================
+    ÁREA DE PERGUNTAS (JOGO)
+===============================*/
+#options {
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+.option {
+    padding: 15px;
+    background: #f0f0f0;
+    border: 2px solid #333;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+.option:hover {
+    background: #ddd;
+}
+
+/* ==============================
+    ELEMENTOS DO MENU
+===============================*/
+#unlock-message {
+    font-style: italic;
+    color: #555;
+    font-size: 14px;
+}
+
+/* ==============================
+    MODAIS (Pop-ups)
+===============================*/
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.modalContent {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    text-align: left;
+    position: relative;
+}
+.closeModal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 24px;
+    color: #555;
+}

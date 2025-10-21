@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Pilares na Matemática</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-wrapper">
+
+        <div id="initial-screen">
+            <h1>🎮 Pilares na Matemática</h1>
+            <p id="unlock-message">Complete 15 fases para desbloquear o Modo Professor.</p>
+            
+            <div class="menu-buttons-grid">
+                <button class="btn" onclick="iniciarJogo('estudante')">Modo Estudante</button>
+                <button class="btn" id="professorMenuBtn" onclick="iniciarJogo('professor')" disabled>🔒 Modo Professor</button>
+                
+                <button class="btn" id="objetivoBtn" onclick="abrirObjetivo()">🎯 Objetivo</button>
+                <button class="btn" id="pilaresBtn" onclick="abrirPilares()">🧩 4 Pilares</button>
+            </div>
+        </div>
+        
+        <div id="game-container" style="display:none;">
+            <p class="stats">
+                <strong>Tempo:</strong> <span id="timer">120</span>s |
+                <strong>Pontos:</strong> <span id="score">0</span> |
+                <strong>Recorde:</strong> <span id="record">0</span> |
+                <strong>Fase:</strong> <span id="fase">1</span>
+                <button id="back-to-menu-btn" onclick="voltarAoMenuPrincipal()">Sair do Jogo</button>
+            </p>
+            <div class="battlefield">
+                <div class="unit">
+                    <div class="character" id="hero"></div>
+                    <div class="hp-wrap">
+                        <div class="health-bar"><div class="health" id="heroHealth"></div></div>
+                    </div>
+                </div>
+                <div class="unit">
+                    <div class="enemy" id="enemy"></div>
+                    <div class="hp-wrap">
+                        <div class="health-bar"><div class="health" id="enemyHealth"></div></div>
+                    </div>
+                </div>
+            </div>
+            <div id="question-area">
+                <h2 id="question"></h2>
+                <div id="options"></div>
+            </div>
+        </div>
+
+        <div id="pilaresModal" class="modal" onclick="if(event.target===this)fecharPilares()">
+            <div class="modalContent">
+                <span class="closeModal" onclick="fecharPilares()">X</span>
+                <h2>🧩 4 Pilares do Pensamento Computacional</h2>
+                <ul>
+                    <li><strong>Decomposição:</strong> quebrar o problema em partes menores.</li>
+                    <li><strong>Reconhecimento de Padrões:</strong> identificar semelhanças.</li>
+                    <li><strong>Abstração:</strong> focar no que importa e descartar detalhes irrelevantes.</li>
+                    <li><strong>Algoritmos:</strong> sequência clara de passos para resolver.</li>
+                </ul>
+            </div>
+        </div>
+        <div id="objetivoModal" class="modal" onclick="if(event.target===this)fecharObjetivo()">
+            <div class="modalContent">
+                <span class="closeModal" onclick="fecharObjetivo()">X</span>
+                <h2>🎯 Objetivo do Jogo</h2>
+                <p>O objetivo é avançar pelas fases respondendo corretamente às questões de matemática, aplicando os 4 pilares do pensamento computacional. Ao completar <strong>15 fases</strong> no modo Estudante, você desbloqueia o <strong>Modo Professor</strong>. Nesse jogo você vai aprender utilizar os 4 pilares para resolver resoluções de problema de matemática.</p>
+            </div>
+        </div>
+        <div id="explicacaoModal" class="modal" onclick="if(event.target===this)fecharExplicacao()">
+            <div class="modalContent" id="explicacaoContent">
+                <span class="closeModal" onclick="fecharExplicacao()">X</span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
