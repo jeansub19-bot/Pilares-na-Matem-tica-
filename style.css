@@ -3,7 +3,7 @@
 ===============================*/
 body {
     font-family: Arial, sans-serif;
-    background: url('file:///C:/Users/NewMo/Downloads/58593139_9404194.jpg') no-repeat center center fixed;
+    background: url ('file:///C:/Users/NewMo/Downloads/58593139_9404194.jpg') no-repeat center center fixed;
     background-size: cover;
     margin: 0;
     padding: 0;
@@ -92,7 +92,8 @@ body {
     background-position: center;
 }
 .character {
-    background-image: url('file:///C:/Users/NewMo/Downloads/Estudo.her%C3%B3i.png');
+    background-image: url ('file:///C:/Users/NewMo/Downloads/Estudo.her%C3%B3i.png');
+}
 }
 .enemy {
     background-image: url('file:///C:/Users/NewMo/Downloads/Vil%C3%A3o.png');
@@ -180,4 +181,5 @@ body {
     font-weight: bold;
     font-size: 24px;
     color: #555;
+
 }
