@@ -3,7 +3,7 @@
 ===============================*/
 body {
     font-family: Arial, sans-serif;
-    background: url ('file:///C:/Users/NewMo/Downloads/58593139_9404194.jpg') no-repeat center center fixed;
+    background: url ('../imagens/58593139_9404194.jpg') no-repeat center center fixed;
     background-size: cover;
     margin: 0;
     padding: 0;
@@ -183,3 +183,4 @@ body {
     color: #555;
 
 }
+
